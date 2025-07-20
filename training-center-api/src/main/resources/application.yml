@@ -1,1 +1,8 @@
-spring.application.name=training-center-api
+spring:
+  application:
+    name: training-center-api
+  profiles:
+    active: dev
+
+springdoc:
+  default-produces-media-type: application/json
