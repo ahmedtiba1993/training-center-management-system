@@ -8,5 +8,9 @@ import lombok.Setter;
 @Setter
 @Builder
 public class AuthenticationResponse {
+
+  /** Indicates whether the user must change their password upon their next login. */
+  private boolean passwordChangeRequired;
+
   private String token;
 }

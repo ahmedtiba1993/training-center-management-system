@@ -1,14 +1,12 @@
-package com.tiba.center.user;
+package com.tiba.center.user.user;
 
-import static jakarta.persistence.FetchType.EAGER;
-
+import com.tiba.center.user.role.Role;
 import jakarta.persistence.*;
 import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -41,7 +39,7 @@ public class User implements UserDetails, Principal {
   private boolean isEnabled;
 
   @Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
-  private boolean mustChangePassword = true;
+  private boolean passwordChangeRequired = true;
 
   @ManyToOne
   @JoinColumn(name = "role_id")

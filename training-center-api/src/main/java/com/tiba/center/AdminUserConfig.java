@@ -1,11 +1,9 @@
 package com.tiba.center;
 
-import java.util.List;
-
-import com.tiba.center.user.Role;
-import com.tiba.center.user.RoleRepository;
-import com.tiba.center.user.User;
-import com.tiba.center.user.UserRepository;
+import com.tiba.center.user.role.Role;
+import com.tiba.center.user.role.RoleRepository;
+import com.tiba.center.user.user.User;
+import com.tiba.center.user.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

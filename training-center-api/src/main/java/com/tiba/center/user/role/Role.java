@@ -1,6 +1,7 @@
-package com.tiba.center.user;
+package com.tiba.center.user.role;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.tiba.center.user.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -22,7 +23,7 @@ public class Role {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "role_sequence")
   @SequenceGenerator(name = "role_sequence", sequenceName = "role_sequence", allocationSize = 1)
-  private Integer id;
+  private Long id;
 
   @Column(unique = true)
   private String name;

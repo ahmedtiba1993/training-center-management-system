@@ -5,7 +5,7 @@ import java.util.HashMap;
 import com.tiba.center.security.auth.dto.AuthenticationRequest;
 import com.tiba.center.security.auth.dto.AuthenticationResponse;
 import com.tiba.center.security.jwt.JwtService;
-import com.tiba.center.user.User;
+import com.tiba.center.user.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -27,6 +27,9 @@ public class AuthenticationService {
     claims.put("userName", user.getUsername());
 
     var jwtToken = jwtService.generateToken(claims, (User) auth.getPrincipal());
-    return AuthenticationResponse.builder().token(jwtToken).build();
+    return AuthenticationResponse.builder()
+        .token(jwtToken)
+        .passwordChangeRequired(user.isPasswordChangeRequired())
+        .build();
   }
 }

@@ -2,7 +2,7 @@ package com.tiba.center.security.config;
 
 import java.util.Optional;
 
-import com.tiba.center.user.User;
+import com.tiba.center.user.user.User;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;

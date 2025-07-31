@@ -1,6 +1,6 @@
 package com.tiba.center.security.config;
 
-import com.tiba.center.user.UserRepository;
+import com.tiba.center.user.user.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
